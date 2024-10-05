@@ -8,6 +8,9 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { MdOutlineOndemandVideo } from "react-icons/md";
 import { FaGithubSquare } from "react-icons/fa";
 
+// useScroll: A hook to track the scroll position of an element.
+// useTransform: A function to interpolate values based on input values.
+
 type ProjectProps = (typeof projectsData)[number];
 
 export default function ProjectCard({
@@ -26,6 +29,11 @@ export default function ProjectCard({
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  // const ref = useRef<HTMLDivElement>(null);: Creates a reference for the div element to track scroll progress.
+  // const { scrollYProgress } = useScroll({...});: Uses the useScroll hook to track the vertical scroll position relative to the ref element. The offset array specifies the scroll range to monitor.
+  // const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);: Maps the scrollYProgress to scale values, transitioning from 0.8 to 1 as you scroll.
+  // const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);: Maps the scrollYProgress to opacity values, transitioning from 0.6 to 1 as you scroll.
 
   return (
     <motion.div

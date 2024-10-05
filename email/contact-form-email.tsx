@@ -1,3 +1,5 @@
+// This code defines a React component called ContactFormEmail,
+// which uses the @react-email/components and @react-email/tailwind libraries to structure and style an email template.
 import React from "react";
 import {
   Html,
@@ -41,4 +43,14 @@ export default function ContactFormEmail({
       </Tailwind>
     </Html>
   );
+}
+
+{
+  /* <Html>: The root component that wraps the email.
+<Head>: A placeholder for metadata (though empty in this case).
+<Preview>: A short summary (preview text) that will appear as a snippet in email inboxes.
+<Tailwind>: Wraps the component to enable the use of Tailwind CSS styles.
+<Body>: The main container for the email content, with some basic Tailwind classes (bg-gray-100, text-black) to set the background and text color.
+<Container>: A wrapper for the content that centers the email body.
+<Section>: A section within the email that contains the message and sender's email. */
 }

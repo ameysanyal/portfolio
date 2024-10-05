@@ -4,7 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
+// Imports the Link component from Next.js, which is used to create client-side navigation.
 import clsx from "clsx";
+//Imports the clsx utility function(clsx is a npm package), which helps conditionally combine CSS class names.
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 export default function Header() {
@@ -30,12 +32,13 @@ export default function Header() {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-black transition dark:text-gray-300 dark:hover:text-white",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-black transition dark:text-gray-300 dark:hover:text-white", //Sets base styles for the link.
                   {
                     "text-gray-950 dark:text-gray-200":
                       activeSection === link.name,
                   }
                 )}
+                //Applies active styles if the link's name matches the active section.
                 href={link.hash}
                 onClick={() => {
                   setActiveSection(link.name);
@@ -48,11 +51,13 @@ export default function Header() {
                   <motion.span
                     className="bg-gray-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-600"
                     layoutId="activeSection"
+                    //Connects this span with the layout animation, allowing it to animate between different items smoothly.
                     transition={{
                       type: "spring",
                       stiffness: 380,
                       damping: 30,
                     }}
+                    //Conditionally renders a span to highlight the active link.
                   ></motion.span>
                 )}
               </Link>

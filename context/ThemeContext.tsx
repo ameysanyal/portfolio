@@ -1,3 +1,5 @@
+// This code defines a ThemeContext in React, which provides a way to toggle between light and dark themes for the application.
+// It also saves the user's theme preference in localStorage and applies the appropriate class to the document (dark for dark mode)
 "use client";
 
 import React, { useEffect, useState, createContext, useContext } from "react";
@@ -18,7 +20,7 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -46,6 +48,8 @@ export default function ThemeContextProvider({
       document.documentElement.classList.add("dark");
     }
   }, []);
+
+  //The useEffect on mount initializes the theme from localStorage or the user's system preference.
 
   return (
     <ThemeContext.Provider

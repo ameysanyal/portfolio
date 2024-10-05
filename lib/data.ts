@@ -3,6 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
+// importing images
 import classroom from "@/public/classroom.png";
 import crm from "@/public/crm.png";
 import user from "@/public/user.png";
@@ -38,6 +39,7 @@ export const links = [
   },
 ] as const;
 
+//With 'as const' The name and url properties are inferred as literal types ("Home", "About", "Contact") instead of general string.
 export const experiencesData = [
   {
     title: "Graduated bootcamp",
@@ -233,3 +235,16 @@ export const skillsData = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
   },
 ] as const;
+
+//"as const" forces TypeScript to treat the values as their literal types and marks them as readonly.
+// It provides type safety by ensuring immutability and preventing changes to the data.
+// It’s especially useful for creating union types from arrays or objects, as it narrows down the type to the exact values.
+
+//Key Features of as const:
+// Literal Type Inference:
+
+// Normally, when you define an object or array, TypeScript will infer general types for the values. Using as const forces TypeScript to infer literal types instead.
+// Literal types are the exact values themselves, rather than broader types like string or number.
+// Readonly:
+
+// The as const assertion also marks the array or object as readonly, meaning that the values cannot be changed. It prevents the reassignment of values at the type level.

@@ -1,10 +1,10 @@
 import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import { useFormStatus } from "react-dom";
-
+// useFormStatus hook provides information about the status of form submission, such as whether it's currently pending.
 export default function SubmitBtn() {
   const { pending } = useFormStatus();
-
+  //The pending property indicates whether the form submission is currently in progress.
   return (
     <button
       type="submit"
@@ -22,3 +22,5 @@ export default function SubmitBtn() {
     </button>
   );
 }
+
+// group: Allows child elements to respond to hover and focus states of the button.

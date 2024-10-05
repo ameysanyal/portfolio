@@ -21,6 +21,9 @@ const fadeInAnimationVariants = {
   }),
 };
 
+//the initial state positions the skill element off-screen (down by 100 pixels) and invisible (opacity 0).
+//the animate state moves the skill element into its correct position (y: 0) and makes it visible (opacity: 1). The staggered effect is achieved using the delay based on the element's index.
+
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
 
@@ -43,10 +46,16 @@ export default function Skills() {
               once: true,
             }}
             custom={index}
+            //The custom prop passes the current index of the skill to the animation function, allowing the staggered delay effect to work based on the skill's position in the list.
             whileHover={{ scale: 1.15 }}
           >
             {skill.skillName}
-            <Image src={skill.skillImage} alt="TS" width={20} height={20} />
+            <Image
+              src={skill.skillImage}
+              alt={skill.skillName}
+              width={20}
+              height={20}
+            />
           </motion.li>
         ))}
       </ul>
