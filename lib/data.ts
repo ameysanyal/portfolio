@@ -11,6 +11,7 @@ import clock from "@/public/clock.png";
 import bootstrap from "@/public/bootstrap.png";
 import scrape from "@/public/scrape.png";
 import todo from "@/public/todo.png";
+import videocall from "@/public/video-call-mern-ts.png";
 
 export const links = [
   {
@@ -42,12 +43,12 @@ export const links = [
 //With 'as const' The name and url properties are inferred as literal types ("Home", "About", "Contact") instead of general string.
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "NodeJS Developer Intern",
+    location: "Remote, India",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "Developing API endpoints Call Center SaaS application using NodeJS, ExpressJS, JOI Schema validation, Sequelize ORM, Postgresql Database, Used AWS S3 for storing images and JSON configuration files, Integrated Stripe Payment gateway, Used Twilio for call, messaging in application",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "06/03/2025 - Present",
   },
   {
     title: "Front-End Developer",
@@ -69,6 +70,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Rewritten JS MERN Project with TypeScript",
+    deployedLink: "https://streamifyit.netlify.app",
+    videoDemo: "",
+    githubRepo: "https://github.com/ameysanyal/video-call-mern-typescript",
+    description: "Video Calling, Chatting using Stream Chat API",
+    tags: [
+      "ReactJS",
+      "TypeScript",
+      "Tailwind CSS",
+      "NodeJS",
+      "MongoDB",
+      "Docker",
+      "AWS EC2",
+      "Nginx",
+      "Vitest",
+    ],
+    imageUrl: videocall,
+  },
+  {
     title: "CRM Statistics",
     deployedLink: "https://crm-statistics.netlify.app/",
     videoDemo:
@@ -76,7 +96,7 @@ export const projectsData = [
     githubRepo: "https://github.com/ameysanyal/CRM-NextJS",
     description:
       "I built a CRM statistics page using NextJS and Chart.js Library",
-    tags: ["React", "Next.js", "Chart.js", "Tailwind CSS"],
+    tags: ["ReactJS", "Next.js", "Chart.js", "Tailwind CSS"],
     imageUrl: crm,
   },
   {
